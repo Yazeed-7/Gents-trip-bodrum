@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Gents Trip · Bodrum '26 (v4)</title>
+<title>The Gents Trip · Bodrum '26 (v8)</title>
 <meta property="og:title" content="The Gents Trip · Bodrum '26">
-<meta property="og:description" content="The trip of the year starts here.">
+<meta property="og:description" content="The trip starts here.">
 <meta property="og:image" content="https://yazeed-7.github.io/Gents-trip-bodrum/gents-trip-preview.jpeg">
 <meta property="og:url" content="https://yazeed-7.github.io/Gents-trip-bodrum/">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
   img{display:block;max-width:100%}
 
   /* ===== INTRO ===== */
-  .intro{position:fixed;inset:0;z-index:1000;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .intro{position:fixed;inset:0;z-index:5000;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .intro.done{animation:introOut 1.5s cubic-bezier(.7,0,.3,1) forwards}
   @keyframes introOut{to{opacity:0;visibility:hidden;transform:scale(1.1)}}
   .intro .frame{position:relative;width:min(88vw,520px);text-align:center;padding:1rem}
@@ -61,8 +61,8 @@
   .stars i{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:tw 4s infinite}
   @keyframes tw{0%,100%{opacity:.15}50%{opacity:.85}}
 
-  main.site{opacity:0;transition:opacity 1s .2s}
-  main.site.reveal{opacity:1}
+  main.site{opacity:0;display:none;transition:opacity 1s .2s}
+  main.site.reveal{opacity:1;display:block}
   section{position:relative;z-index:2}
 
   /* progress rail (side) */
@@ -245,8 +245,8 @@
   .amend .amend-fx{position:absolute;inset:0;pointer-events:none;opacity:.35;
     background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 2px,transparent 2px 4px);animation:flick .18s steps(2) infinite}
   .heart-float{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-  .heart-float i{position:absolute;bottom:-40px;font-size:22px;opacity:0;animation:rise linear infinite}
-  @keyframes rise{0%{transform:translateY(0) scale(.7);opacity:0}12%{opacity:.9}100%{transform:translateY(-108vh) scale(1.1);opacity:0}}
+  .heart-float i{position:absolute;bottom:-40px;font-size:22px;opacity:0;animation:floatUp linear infinite}
+  @keyframes floatUp{0%{transform:translateY(0) scale(.7);opacity:0}12%{opacity:.9}100%{transform:translateY(-108vh) scale(1.1);opacity:0}}
   .amend-inner{position:relative;z-index:2;max-width:540px;width:100%;text-align:center;background:rgba(26,20,6,.72);border:1px solid rgba(208,165,88,.3);border-radius:22px;padding:clamp(2rem,6vw,3.2rem);backdrop-filter:blur(6px);box-shadow:0 40px 100px -30px rgba(0,0,0,.9);direction:rtl}
   .big-heart{font-size:3.4rem;margin-bottom:1rem;animation:wobble 1.4s ease-in-out infinite;filter:drop-shadow(0 6px 16px rgba(208,165,88,.4))}
   @keyframes wobble{0%,100%{transform:rotate(-8deg) scale(1)}25%{transform:rotate(8deg) scale(1.1)}50%{transform:rotate(-6deg) scale(1)}75%{transform:rotate(6deg) scale(1.08)}}
@@ -426,7 +426,7 @@ const stars=document.getElementById('stars');
 for(let i=0;i<70;i++){const s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*70+'%';s.style.animationDelay=(Math.random()*4)+'s';stars.appendChild(s);}
 
 const intro=document.getElementById('intro'),site=document.getElementById('site');
-function enter(){if(intro.classList.contains('done'))return;intro.classList.add('done');site.classList.add('reveal');setTimeout(()=>intro.style.display='none',1600);}
+function enter(){if(intro.classList.contains('done'))return;site.style.display='block';site.classList.add('reveal');intro.classList.add('done');setTimeout(()=>intro.style.display='none',1600);}
 document.getElementById('choiceMiss').addEventListener('click',enter);
 document.getElementById('choiceOut').addEventListener('click',()=>{document.getElementById('firedPage').classList.add('show');});
 document.getElementById('choiceMe').addEventListener('click',()=>{document.getElementById('excusePage').classList.add('show');});
