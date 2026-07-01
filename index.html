@@ -3,15 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Gents Trip · Bodrum '26</title> 
-  <meta property="og:title" content="The Gents Trip · Bodrum '26">
-<meta property="og:description" content="The trip of the year starts here.">
-
-<meta property="og:image" content="https://yazeed-7.github.io/Gents-trip-bodrum/gents-trip-preview.jpeg">
-
+<title>The Gents Trip · Bodrum '26 (v4)</title>
+<meta property="og:title" content="The Gents Trip · Bodrum '26">
+<meta property="og:description" content="Four gents. Nine days. One unforgettable summer in Bodrum.">
+<meta property="og:image" content="https://yazeed-7.github.io/Gents-trip-bodrum/gents-trip-preview.jpg">
 <meta property="og:url" content="https://yazeed-7.github.io/Gents-trip-bodrum/">
 <meta name="twitter:card" content="summary_large_image">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -56,6 +53,8 @@
   .intro .choice.go:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 30px -10px rgba(208,165,88,.6)}
   .intro .choice.out{background:rgba(255,255,255,.05);color:var(--sand);border:1px dashed rgba(239,231,215,.35)}
   .intro .choice.out:hover{transform:translateY(-3px);border-color:#c9704e;color:#e89078}
+  .intro .choice.me{background:rgba(120,140,255,.08);color:#cdd6ff;border:1px dashed rgba(150,170,255,.4)}
+  .intro .choice.me:hover{transform:translateY(-3px);border-color:#8a9cff;color:#e6ebff}
 
   .sea-bg{position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,#04100f,#071a19 45%,#0a2a28)}
   .stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5}
@@ -201,6 +200,66 @@
   .appeal-msg{margin-top:1.4rem;font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:#ff9a9a;direction:rtl;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s,max-height .5s}
   .appeal-msg.show{opacity:1;max-height:80px;animation:shake .5s}
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+  /* ===== BUT I'M ABDULHAKIM PAGE ===== */
+  .excuse{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:2rem 1.4rem;overflow-y:auto;
+    background:radial-gradient(130% 100% at 50% 0%,#101a3a,#0a0f24 58%,#05070f)}
+  .excuse.show{display:flex;animation:firedIn .6s ease both}
+  .excuse .ex-fx{position:absolute;inset:0;pointer-events:none;opacity:.4;
+    background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 2px,transparent 2px 4px);animation:flick .18s steps(2) infinite}
+  .ex-inner{position:relative;z-index:2;max-width:600px;width:100%;text-align:center;background:rgba(12,18,42,.66);border:1px solid rgba(140,160,255,.22);border-radius:22px;padding:clamp(1.8rem,5.5vw,3rem);backdrop-filter:blur(6px);box-shadow:0 40px 100px -30px rgba(0,0,0,.9);direction:rtl}
+  .ex-badge{display:inline-block;font-family:'Jost';font-size:.72rem;letter-spacing:.12em;color:#aeb9ff;background:rgba(140,160,255,.1);border:1px solid rgba(140,160,255,.25);border-radius:100px;padding:.5rem 1rem;margin-bottom:1.4rem}
+  .ex-title{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.2rem,8vw,3.4rem);line-height:1;color:#fff;margin-bottom:.9rem}
+  .ex-title span{color:#8a9cff;font-style:italic}
+  .ex-lead{font-size:.98rem;font-weight:300;color:rgba(230,235,255,.8);line-height:1.6;margin-bottom:2rem}
+  .timeline-ex{display:flex;flex-direction:column;gap:1rem;text-align:right;margin-bottom:2rem}
+  .tl-item{background:rgba(255,255,255,.04);border:1px solid rgba(140,160,255,.15);border-right:3px solid #8a9cff;border-radius:12px;padding:1rem 1.2rem;opacity:0;transform:translateX(12px);transition:opacity .5s,transform .5s}
+  .excuse.show .tl-item{opacity:1;transform:none}
+  .excuse.show .tl-item:nth-child(1){transition-delay:.15s}
+  .excuse.show .tl-item:nth-child(2){transition-delay:.3s}
+  .excuse.show .tl-item:nth-child(3){transition-delay:.45s}
+  .excuse.show .tl-item:nth-child(4){transition-delay:.6s}
+  .excuse.show .tl-item:nth-child(5){transition-delay:.75s}
+  .excuse.show .tl-item:nth-child(6){transition-delay:.95s}
+  .tl-when{font-family:'Jost';font-size:.72rem;letter-spacing:.06em;color:#8a9cff;margin-bottom:.4rem}
+  .tl-quote{font-family:'Fraunces',serif;font-size:1.05rem;color:#eef1ff;line-height:1.5}
+  .tl-item.finale{border-right-color:#ff6b6b;background:rgba(255,80,80,.06)}
+  .tl-item.finale .tl-when{color:#ff9a9a}
+  .verdict{background:linear-gradient(135deg,rgba(138,156,255,.12),rgba(255,107,107,.08));border:1px solid rgba(160,175,255,.28);border-radius:16px;padding:1.4rem;margin-bottom:1.8rem}
+  .verdict-label{font-family:'Jost';font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:#aeb9ff;margin-bottom:.7rem}
+  .verdict-text{font-family:'Fraunces',serif;font-size:1.15rem;color:#fff;line-height:1.6}
+  .verdict-text b{color:#8a9cff;font-size:1.9rem;display:inline-block;margin-top:.3rem}
+  .ex-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+  .exbtn{font-family:'Jost';font-size:.95rem;font-weight:500;padding:.8rem 1.5rem;border-radius:100px;cursor:pointer;direction:rtl;transition:transform .3s,box-shadow .3s,border-color .3s;border:1px solid transparent}
+  .exbtn{background:linear-gradient(135deg,#8a9cff,#6b78d8);color:#fff}
+  .exbtn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 30px -10px rgba(140,160,255,.6)}
+  .exbtn.ghost{background:rgba(255,255,255,.05);color:rgba(230,235,255,.8);border:1px dashed rgba(160,175,255,.4)}
+  .exbtn.ghost:hover{border-color:#8a9cff}
+  .exbtn.goamend{background:linear-gradient(135deg,#d0a558,#eccf94);color:#12211f}
+  .exbtn.goamend:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 30px -10px rgba(208,165,88,.6)}
+  .ex-msg{margin-top:1.4rem;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:#aeb9ff;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s,max-height .5s}
+  .ex-msg.show{opacity:1;max-height:120px;animation:shake .5s}
+  /* ===== HOW TO MAKE IT UP PAGE ===== */
+  .amend{position:fixed;inset:0;z-index:2100;display:none;align-items:center;justify-content:center;padding:2rem 1.4rem;overflow:hidden;
+    background:radial-gradient(130% 100% at 50% 0%,#2a1e05,#160f04 58%,#0a0703)}
+  .amend.show{display:flex;animation:firedIn .6s ease both}
+  .amend .amend-fx{position:absolute;inset:0;pointer-events:none;opacity:.35;
+    background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 2px,transparent 2px 4px);animation:flick .18s steps(2) infinite}
+  .heart-float{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+  .heart-float i{position:absolute;bottom:-40px;font-size:22px;opacity:0;animation:rise linear infinite}
+  @keyframes rise{0%{transform:translateY(0) scale(.7);opacity:0}12%{opacity:.9}100%{transform:translateY(-108vh) scale(1.1);opacity:0}}
+  .amend-inner{position:relative;z-index:2;max-width:540px;width:100%;text-align:center;background:rgba(26,20,6,.72);border:1px solid rgba(208,165,88,.3);border-radius:22px;padding:clamp(2rem,6vw,3.2rem);backdrop-filter:blur(6px);box-shadow:0 40px 100px -30px rgba(0,0,0,.9);direction:rtl}
+  .big-heart{font-size:3.4rem;margin-bottom:1rem;animation:wobble 1.4s ease-in-out infinite;filter:drop-shadow(0 6px 16px rgba(208,165,88,.4))}
+  @keyframes wobble{0%,100%{transform:rotate(-8deg) scale(1)}25%{transform:rotate(8deg) scale(1.1)}50%{transform:rotate(-6deg) scale(1)}75%{transform:rotate(6deg) scale(1.08)}}
+  .amend-kick{font-family:'Jost';font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#eccf94;margin-bottom:1rem}
+  .amend-title{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.2rem,8vw,3.2rem);color:#fff;margin-bottom:1.2rem}
+  .amend-text{font-size:1.15rem;font-weight:300;line-height:1.75;color:rgba(255,248,235,.9);margin-bottom:2rem}
+  .amend-text b{color:#eccf94;font-weight:500}
+  .amend-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+  .amend-btn{font-family:'Jost';font-size:1rem;font-weight:500;padding:.85rem 1.7rem;border-radius:100px;cursor:pointer;direction:rtl;text-decoration:none;display:inline-block;transition:transform .3s,box-shadow .3s,border-color .3s;border:1px solid transparent}
+  .amend-btn{background:linear-gradient(135deg,#d0a558,#eccf94);color:#12211f}
+  .amend-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 30px -10px rgba(208,165,88,.6)}
+  .amend-btn.ghost{background:rgba(255,255,255,.05);color:rgba(255,248,235,.8);border:1px dashed rgba(208,165,88,.4)}
+  .amend-btn.ghost:hover{border-color:#eccf94}
 </style>
 </head>
 <body>
@@ -216,6 +275,7 @@
     <div class="choices" id="choices">
       <button class="choice go" id="choiceMiss">هيوحشنا 🕊️</button>
       <button class="choice out" id="choiceOut">بقلعته يا رجال 😤</button>
+      <button class="choice me" id="choiceMe">بس أنا عبدالحكيم 😣</button>
     </div>
   </div>
 </div>
@@ -242,6 +302,71 @@
       <button class="fbtn ghost" id="backToIntro">ارجع 👈</button>
     </div>
     <div class="appeal-msg" id="appealMsg">مرفوض. 🚫 نشوفك السنة الجاية إن شاء الله.</div>
+  </div>
+</div>
+
+<!-- "BUT I'M ABDULHAKIM" PAGE -->
+<div class="excuse" id="excusePage">
+  <div class="ex-fx"></div>
+  <div class="ex-inner">
+    <div class="ex-badge">ملف القضية · المتهم: عبدالحكيم</div>
+    <h1 class="ex-title">بس أنا <span>عبدالحكيم</span></h1>
+    <p class="ex-lead">الدفاع يطلب البراءة. المحكمة راجعت الأرشيف. النتيجة أدناه.</p>
+
+    <div class="timeline-ex">
+      <div class="tl-item">
+        <div class="tl-when">قبل الرحلة بسنة</div>
+        <div class="tl-quote">"يا لبيه يا عيال، والله سفرة العمر"</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when">قبل الرحلة بـ ٦ أشهر</div>
+        <div class="tl-quote">"يا عيال بتقضى من فار فيتش"</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when">قبل الرحلة بـ ٣ أشهر</div>
+        <div class="tl-quote">"يا عيال تكفون خلو السفرة سفرة بحرررر"</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when">قبل الرحلة بشهرين</div>
+        <div class="tl-quote">"ازهلو ازهلو الوالد بيحوّل وبحجز"</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when">قبل الرحلة بشهر ونص</div>
+        <div class="tl-quote">"يا عيال لا تقرشونني، خلاص والله بحجز"</div>
+      </div>
+      <div class="tl-item finale">
+        <div class="tl-when">قبل الرحلة بشهر</div>
+        <div class="tl-quote">"المعذرة يا عيال، والله ما أقدر"</div>
+      </div>
+    </div>
+
+    <div class="verdict">
+      <div class="verdict-label">الحكم النهائي</div>
+      <p class="verdict-text">لقب هذا العام: <b>الخوستا</b></p>
+    </div>
+
+    <div class="ex-actions">
+      <button class="exbtn goamend" id="exAmend">كيف أعوضكم؟</button>
+      <button class="exbtn" id="exDefend">عندي عذر قوي</button>
+      <button class="exbtn ghost" id="exBack">ارجع</button>
+    </div>
+    <div class="ex-msg" id="exMsg">سمعناها السنة اللي طافت، والسنة اللي قبلها. عيّدنا عليك بالغياب.</div>
+  </div>
+</div>
+
+<!-- "HOW TO MAKE IT UP" PAGE -->
+<div class="amend" id="amendPage">
+  <div class="amend-fx"></div>
+  <div class="heart-float" id="heartFloat"></div>
+  <div class="amend-inner">
+    <div class="big-heart">😂</div>
+    <div class="amend-kick">الحكم · شرط العودة</div>
+    <h1 class="amend-title">كيف تعوّضنا</h1>
+    <p class="amend-text">تبي تعوّضنا؟ تحب راس كل واحد فينا زي المقطع اللي تحت.</p>
+    <div class="amend-actions">
+      <a class="amend-btn" href="https://vt.tiktok.com/ZSCH2tpTc/" target="_blank" rel="noopener">شوف المقطع 📱</a>
+      <button class="amend-btn ghost" id="amendBack">ارجع 👈</button>
+    </div>
   </div>
 </div>
 
@@ -304,6 +429,18 @@ const intro=document.getElementById('intro'),site=document.getElementById('site'
 function enter(){if(intro.classList.contains('done'))return;intro.classList.add('done');site.classList.add('reveal');setTimeout(()=>intro.style.display='none',1600);}
 document.getElementById('choiceMiss').addEventListener('click',enter);
 document.getElementById('choiceOut').addEventListener('click',()=>{document.getElementById('firedPage').classList.add('show');});
+document.getElementById('choiceMe').addEventListener('click',()=>{document.getElementById('excusePage').classList.add('show');});
+document.getElementById('exDefend').addEventListener('click',()=>{document.getElementById('exMsg').classList.add('show');});
+document.getElementById('exAmend').addEventListener('click',()=>{
+  const ap=document.getElementById('amendPage');ap.classList.add('show');
+  const hf=document.getElementById('heartFloat');
+  if(!hf.dataset.built){hf.dataset.built="1";const em=['😂','🤣','😹','💀'];
+    for(let i=0;i<14;i++){const h=document.createElement('i');h.textContent=em[i%em.length];
+      h.style.left=Math.random()*100+'%';h.style.animationDuration=(5+Math.random()*4)+'s';
+      h.style.animationDelay=(Math.random()*5)+'s';hf.appendChild(h);}}
+});
+document.getElementById('amendBack').addEventListener('click',()=>{document.getElementById('amendPage').classList.remove('show');});
+document.getElementById('exBack').addEventListener('click',()=>{document.getElementById('excusePage').classList.remove('show');document.getElementById('exMsg').classList.remove('show');});
 document.getElementById('appeal').addEventListener('click',()=>{document.getElementById('appealMsg').classList.add('show');});
 document.getElementById('backToIntro').addEventListener('click',()=>{document.getElementById('firedPage').classList.remove('show');document.getElementById('appealMsg').classList.remove('show');});
 
